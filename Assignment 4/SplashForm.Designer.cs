@@ -33,6 +33,7 @@
             this.SplashProgressBar = new System.Windows.Forms.ProgressBar();
             this.SplashTimer = new System.Windows.Forms.Timer(this.components);
             this.SplashLabel = new System.Windows.Forms.Label();
+            this.ProgressTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // SplashProgressBar
@@ -45,6 +46,7 @@
             // SplashTimer
             // 
             this.SplashTimer.Interval = 3000;
+            this.SplashTimer.Tick += new System.EventHandler(this.SplashTimer_Tick);
             // 
             // SplashLabel
             // 
@@ -57,6 +59,11 @@
             this.SplashLabel.TabIndex = 1;
             this.SplashLabel.Text = "BMI Calculator";
             this.SplashLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ProgressTimer
+            // 
+            this.ProgressTimer.Interval = 300;
+            this.ProgressTimer.Tick += new System.EventHandler(this.ProgressTimer_Tick);
             // 
             // SplashForm
             // 
@@ -82,5 +89,6 @@
         private System.Windows.Forms.ProgressBar SplashProgressBar;
         private System.Windows.Forms.Timer SplashTimer;
         private System.Windows.Forms.Label SplashLabel;
+        private System.Windows.Forms.Timer ProgressTimer;
     }
 }
